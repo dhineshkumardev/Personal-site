@@ -7,76 +7,78 @@
 body{
     background-color: black;
 }
-.image{
+div.text .image{
     border: none;
     background-color: rgb(77, 76, 76);
     margin: 5px;
     padding:10px;
     padding-top: 30px;
 }
-.image:hover,.button:focus{
+div.text .image:hover,div.text .button:focus{
     background-color: #B449B6;
     border-radius: 5px;
     box-shadow: 5px 5px 10px #B449B6;
 }
-.image:active{
+div.text .image:active{
     box-shadow: none;
 }
 
-.button{
+div.text .button{
     text-align: center;
-    font-size: 30px;
     border: none;
     background-color: rgb(77, 76, 76);
+
     color: white;
     margin: 5px;
     padding:20px;
 
 }
-.button:hover,.button:focus {
+div.text .button:hover,div.text .button:focus {
     background-color: #B449B6;
     color: white;
     border-radius:5px;
     box-shadow: 2px 2px 5px #B449B6;
 }
-.button:active{
+div.text .button:active{
     box-shadow: none;
 }
-.home{
+div.text .home{
     overflow: hidden;
     position: fixed;
     list-style-type:none;
     background-color: rgb(77, 76, 76);
     border-radius:5px;
     margin: 0px;
-    margin-right: 10px;
+    margin-right: 20px;
     width:100%;
 }
-.profile img{
-    padding: 20px;
-    width: 200px;
-    height: 200px;
-    object-fit:cover;
-    border-radius: 50%;
+@media screen and (min-width: 600px){
+    div.text .profile img{
+        padding: 12px;
+        width: 200px;
+        height: 200px;
+        object-fit:cover;
+        border-radius: 50%;
+    }
 }
-.home li{    
+div.text .home li{    
     float: right;
 }
-.home img{
-
-    padding-top: 20px;
-    width:50px;
-    height: 40px;
+@media screen and (min-width: 600px){
+    div.text .home img{
+        padding-top: 20px;
+        width: 50px;
+        height: 40px;
+    }
 }
-.profile-container{
+div.text .profile-container{
     display: flex;
     flex-wrap: wrap;
-    font-size: 30px;
     text-align: center;
     max-width: 100%;
     padding-top:95px;
 }
-.profile-item{
+div.text .profile-item{
     background-color: rgb(77, 76, 76);
     padding-top: 0px;
     min-width: 40%;
@@ -85,18 +87,17 @@ body{
     margin: 5px;
     margin-top: 0px;
     width: 30%;
-
 }
-.Personal-detail table,.control-about table {
+div.text .Personal-detail table,div.text .control-about table {
     text-align: left; 
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.Personal-detail table td,.control-about table td{
+div.text .Personal-detail table td,div.text .control-about table td{
     padding-left:30px;
     padding-bottom: 20px;
 }
-.about-item{
+div.text .about-item{
     background-color: rgb(77, 76, 76);
     color:white;
     margin-left: 10px;
@@ -104,34 +105,84 @@ body{
     border-radius: 10px;
     margin-bottom: 5px;
 }
-.about-item .about{
+div.text .about-item .about{
     padding-bottom: 10px;
     padding-top: 10px;
     border-top-left-radius : 10px;
     border-top-right-radius : 10px;
-    font-size: 40px;
     background-color: #B449B6;
 }
-.Personal-detail p, .skills p, .control-about p{
+
+div.text .Personal-detail p,div.text .skills p,div.text .control-about p{
     color: rgb(235, 235, 235);
     padding-top: 5px;
     padding-bottom: 5px;
     text-align: center;
-    font-size: 40px;
     background-color:#B449B6;
 }
-.skills .content li{
+div.text .skills .content li{
     list-style-type:none;
     margin-bottom: 10px;
-    font-family: verdana;
     width:70%;
     text-align:left;
-    font-weight:300;
     border-bottom:1px;
     margin-left: 30px;
 }
-a:-webkit-any-link {
+div.text a{
     color: white;
     cursor:none;
     text-decoration: none;
+}
+
+@media screen and (max-width: 600px){
+    *{
+        font-family: verdana;
+        font-size: 15px;
+        padding: 0px;
+        margin: 0px;
+    }
+    div.text .profile-container{
+        text-align: center;
+        max-width: 100%;
+        padding-top:70px;
+    }
+    div.text .profile-item{
+        background-color: rgb(77, 76, 76);
+        padding-top: 0px;
+        min-width: 98%;
+        border-radius: 10px;
+        color:white;
+        margin: 5px;
+        margin-top: 0px;
+        width: 30%;
+    }
+    div.text .about-item{
+        background-color: rgb(77, 76, 76);
+        color:white;
+        margin-left: 5px;
+        margin-right: 10px;
+        min-width: 98%;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+    div.text .about-item .about{
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-top-left-radius : 10px;
+        border-top-right-radius : 10px;
+        background-color: #B449B6;
+    }
+    div.text .home img{
+        padding-top: 20px;
+        width: 30px;
+        height: 20px;
+    }
+
+    div.text .profile img{
+        padding: 12px;
+        width: 100px;
+        height: 100px;
+        object-fit:cover;
+        border-radius: 50%;
+    }
 }
