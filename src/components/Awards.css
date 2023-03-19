@@ -27,3 +27,18 @@ p{
     box-shadow: none;
     transition-duration: .5s;
 }
+
+
+@media screen and (max-width: 1000px){
+
+    .link{
+        border: none;
+        width: 50%;
+        background-color: #1c8a9d;
+        color: white;
+        margin: 5px;
+        padding-left: 10px;
+        border-radius: 10px;
+        box-shadow: 7px 7px 0px #1c8a9d83;
+    }
+}
