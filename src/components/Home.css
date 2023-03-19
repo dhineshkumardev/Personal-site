@@ -70,3 +70,40 @@ p{
     border-top-right-radius : 10px;
     background-color: #1c8a9d;
 }
+
+
+@media screen and (max-width: 1000px){
+    *{
+        font-family: verdana;
+        font-size: 15px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .profile-container{
+        text-align: center;
+        max-width: 100%;
+        padding-top:70px;
+    }
+    .profile-item{
+
+        min-width: 99%;
+
+    }
+    .about-item{
+
+        margin-left: 5px;
+
+        min-width: 99%;
+
+    }
+
+   
+
+    .profile img{
+        padding: 12px;
+        width: 100px;
+        height: 100px;
+        object-fit:cover;
+        border-radius: 50%;
+    }
+}

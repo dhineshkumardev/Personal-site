@@ -19,6 +19,29 @@
     margin-top: 0px;
     width: 49%;
     margin-bottom: 3%;
+}
 
 
+
+
+@media screen and (max-width: 1000px){
+    *{
+        font-family: verdana;
+        font-size: 15px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .container1{
+        font-size: 30px;
+        text-align: center;
+        max-width: 100%;
+        padding-top:80px;
+    }
+    .sub1, .sub2{
+        padding-bottom: 30px;
+        border-radius: 10px;
+        margin: 10px;
+        width: 100%;
+    
+    }
 }

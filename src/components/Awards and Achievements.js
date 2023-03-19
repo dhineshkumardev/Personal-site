@@ -45,7 +45,7 @@ export const Awards =() =>{
                 </div>
                 <div class="sub2">
                     <Award head="Symposium"
-                     body ="Presented a paper on <b>“The Embedded”</b> at AAA College of Engineering &Technology on 7th
+                     body ="Presented a paper on ‘The Embedded’ at AAA College of Engineering &Technology on 7th
                      September 2018"
                      Url="/image/rect.jpg"
                         bname="Certificate"
