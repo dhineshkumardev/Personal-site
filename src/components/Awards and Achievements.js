@@ -1,8 +1,12 @@
 import './Awards and Achievements.css';
 import { Award } from './Award';
+import { Helmet } from 'react-helmet';
 export const Awards =() =>{
     return(
         <div>
+            <Helmet>
+                <title>Dhinesh | Awards</title>
+            </Helmet>
             <div class="container1">
                 <div class="sub1">
                     <Award head="Conducted"
