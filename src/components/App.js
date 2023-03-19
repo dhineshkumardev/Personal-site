@@ -6,6 +6,8 @@ import { Awards } from './Awards and Achievements';
 function App() {
   return (
   <>
+    
+    <title>Dhineshkumar</title>
     <Navbar />
     <Routes>
         <Route path='/' element={<Home />} /> 
