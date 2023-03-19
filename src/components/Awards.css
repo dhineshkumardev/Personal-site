@@ -1,0 +1,29 @@
+h1{
+    margin: 0px;
+    padding:10px;
+    color:white;
+    background-color:#1c8a9d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 30px;
+}
+p{
+    padding: 10px;
+    margin-bottom: 3%;
+    font-size: 24px;
+}
+.link{
+    border: none;
+    width: 50%;
+    background-color: #1c8a9d;
+    color: white;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 0px #1c8a9d83;
+    
+}
+.link:active{
+    box-shadow: none;
+    transition-duration: .5s;
+}

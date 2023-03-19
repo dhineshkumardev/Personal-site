@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  background-color:black;
+  color:white;
+}
+link{
+  color:black;
+  font-size: large;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
