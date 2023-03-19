@@ -5,7 +5,7 @@ export const Home =()=>{
         <div class="profile-container">
             <div class="profile-item">
                 <div class="profile">
-                    <img src="/image/photo.jpg"/>
+                    <img src="/image/photo.jpg" alt='profile_image'/>
                     <div class="skills">
                         <p>Skills</p>
                         <ul class="content">
