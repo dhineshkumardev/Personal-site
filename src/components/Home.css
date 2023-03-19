@@ -1,0 +1,72 @@
+body{
+    font-family: verdana;
+    font-size: 25px;
+    padding: 0px;
+    margin: 0px;
+}
+.profile-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 100%;
+    padding-top:95px;
+}
+.profile-item{
+    background-color: rgb(77, 76, 76);
+    padding-top: 0px;
+    border-radius: 10px;
+    color:white;
+    margin: 5px;
+    margin-top: 0px;
+    width: 40%;
+}
+.profile img{
+    padding: 12px;
+    width: 200px;
+    height: 200px;
+    object-fit:cover;
+    border-radius: 50%;
+}
+.Personal-detail table,.control-about table {
+    text-align: left; 
+    padding-top: 20px;
+    padding-bottom: 17px;
+}
+.Personal-detail table td,.control-about table td{
+    padding-left:30px;
+    padding-bottom: 20px;
+}
+.Personal-detail p,.skills p,.control-about p{
+    color: rgb(235, 235, 235);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color:#1c8a9d;
+}
+.skills .content li{
+    list-style-type:none;
+    margin-bottom: 10px;
+    width:70%;
+    text-align:left;
+    border-bottom:1px;
+    margin-left: 30px;
+}
+p{
+    margin: 0px;
+}
+.about-item{
+    background-color: rgb(77, 76, 76);
+    color:white;
+    margin-left: 0%;
+    width: 59%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.about-item .about p{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-top-left-radius : 10px;
+    border-top-right-radius : 10px;
+    background-color: #1c8a9d;
+}
