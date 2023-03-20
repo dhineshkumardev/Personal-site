@@ -1,5 +1,5 @@
 import './Awards and Achievements.css';
-import { Award } from './Award';
+import { Award } from './components/Award';
 import { Helmet } from 'react-helmet';
 export const Awards =() =>{
     return(
