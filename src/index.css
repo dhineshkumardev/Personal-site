@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  background-color:black;
-  color:white;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  * {
+    @apply scroll-smooth;
+  }
 }
-link{
-  color:black;
-  font-size: large;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
 }
