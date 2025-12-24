@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Favicon PNG</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    canvas {
+      border: 2px solid #ddd;
+      margin: 20px 0;
+      display: block;
+    }
+    button {
+      background: linear-gradient(to right, #ec4899, #a855f7);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 5px;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Generate Favicon PNG from SVG</h1>
+    <p>This tool will generate PNG versions of your favicon for better browser compatibility.</p>
+    
+    <canvas id="faviconCanvas" width="512" height="512"></canvas>
+    
+    <div>
+      <button onclick="generatePNG(192)">Download 192x192 PNG</button>
+      <button onclick="generatePNG(512)">Download 512x512 PNG</button>
+      <button onclick="generatePNG(32)">Download 32x32 PNG</button>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('faviconCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Create the DK logo
+    function drawLogo(size) {
+      canvas.width = size;
+      canvas.height = size;
+      
+      // Dark background
+      ctx.fillStyle = '#0a0a0a';
+      ctx.fillRect(0, 0, size, size);
+      
+      // Create gradient
+      const gradient = ctx.createLinearGradient(0, 0, size, 0);
+      gradient.addColorStop(0, '#ec4899');
+      gradient.addColorStop(0.5, '#d946ef');
+      gradient.addColorStop(1, '#a855f7');
+      
+      // Draw DK text
+      ctx.fillStyle = gradient;
+      ctx.font = `bold ${size * 0.58}px Arial, sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('DK', size / 2, size / 2 + size * 0.05);
+    }
+    
+    function generatePNG(size) {
+      drawLogo(size);
+      canvas.toBlob(function(blob) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `favicon-${size}x${size}.png`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+    }
+    
+    // Draw initial preview
+    drawLogo(512);
+  </script>
+</body>
+</html>
+
