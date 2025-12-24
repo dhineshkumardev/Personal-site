@@ -1,7 +1,20 @@
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
+import { useState } from 'react';
 
 export const Contact = () => {
+  const [emailCopied, setEmailCopied] = useState(false);
+  const emailAddress = 'dhineshkumarmofficial@gmail.com';
+
+  const copyEmailToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(emailAddress);
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy email:', err);
+    }
+  };
   const LinkedInIcon = () => (
     <svg
       className="w-12 h-12 text-purple-400 group-hover:text-pink-400 group-hover:scale-110 transition-all"
@@ -114,20 +127,23 @@ export const Contact = () => {
             Let's Work Together
           </h2>
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            As a Freelance Full Stack Developer and Designated Partner at
-            ThreePilot LLP, I'm passionate about creating innovative mobile and web
+            As a Freelance Full Stack Developer, I'm passionate about creating innovative mobile and web
             solutions. Whether you need a mobile app, website, landing page, personal site,
             e-commerce platform, consultation, or collaboration on a project, I'd love to hear from you.
+            {/* As a Freelance Full Stack Developer and Designated Partner at
+            ThreePilot LLP, I'm passionate about creating innovative mobile and web
+            solutions. Whether you need a mobile app, website, landing page, personal site,
+            e-commerce platform, consultation, or collaboration on a project, I'd love to hear from you. */}
           </p>
           <div className="flex flex-wrap gap-4">
-            <motion.a
-              href="mailto:dhineshkumarmofficial@gmail.com"
-              className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all"
+            <motion.button
+              onClick={copyEmailToClipboard}
+              className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Send Email
-            </motion.a>
+              {emailCopied ? 'Email Copied!' : 'Copy Email'}
+            </motion.button>
             <motion.a
               href="https://www.linkedin.com/in/dhinesh-kumar-s-55402a1b2/"
               target="_blank"
@@ -139,6 +155,16 @@ export const Contact = () => {
               Connect on LinkedIn
             </motion.a>
           </div>
+          {emailCopied && (
+            <motion.p
+              className="text-center text-green-400 mt-4"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+            >
+              Email address copied to clipboard!
+            </motion.p>
+          )}
         </motion.div>
       </motion.section>
     </div>

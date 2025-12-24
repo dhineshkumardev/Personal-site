@@ -28,7 +28,7 @@ export const Home = () => {
         <title>Dhinesh Kumar S | Full Stack Developer & Freelancer</title>
         <meta
           name="description"
-          content="Full Stack Developer specializing in mobile apps, websites, landing pages, and e-commerce solutions with 2 years of experience. Freelancer and Designated Partner at ThreePilot LLP."
+          content="Full Stack Developer specializing in mobile apps, websites, landing pages, and e-commerce solutions with 2 years of experience. Freelancer."
         />
       </Helmet>
 
@@ -75,8 +75,9 @@ export const Home = () => {
             Full Stack Developer with{' '}
             <span className="text-purple-400 font-semibold">2 years</span> of
             experience building mobile apps, websites, landing pages, personal sites,
-            and e-commerce solutions. Freelancer and Designated Partner at{' '}
-            <span className="text-purple-400 font-semibold">ThreePilot LLP</span>.
+            and e-commerce solutions. Freelancer.
+            {/* Freelancer and Designated Partner at{' '}
+            <span className="text-purple-400 font-semibold">ThreePilot LLP</span>. */}
           </motion.p>
           <motion.div
             className="flex flex-wrap gap-4 pt-4"

@@ -3,18 +3,18 @@ import { Helmet } from 'react-helmet';
 
 export const Experience = () => {
   const experiences = [
-    {
-      title: 'Designated Partner',
-      company: 'ThreePilot LLP',
-      period: 'Present',
-      type: 'Partnership',
-      description: [
-        'Leading full-stack development initiatives and strategic partnerships',
-        'Collaborating with clients to deliver innovative mobile and web solutions',
-        'Managing project delivery and client relationships',
-      ],
-      icon: '🚀',
-    },
+    // {
+    //   title: 'Designated Partner',
+    //   company: 'ThreePilot LLP',
+    //   period: 'Present',
+    //   type: 'Partnership',
+    //   description: [
+    //     'Leading full-stack development initiatives and strategic partnerships',
+    //     'Collaborating with clients to deliver innovative mobile and web solutions',
+    //     'Managing project delivery and client relationships',
+    //   ],
+    //   icon: '🚀',
+    // },
     {
       title: 'Freelance Full Stack Developer',
       company: 'Self Employed',

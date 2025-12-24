@@ -81,6 +81,8 @@ export const About = () => {
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 Currently working as a{' '}
+                <span className="text-purple-400 font-semibold">Freelancer</span>.
+                {/* Currently working as a{' '}
                 <span className="text-purple-400 font-semibold">Freelancer</span> and
                 serving as a{' '}
                 <span className="text-purple-400 font-semibold">
@@ -88,7 +90,7 @@ export const About = () => {
                 </span>{' '}
                 at ThreePilot LLP, where I contribute to innovative full-stack
                 solutions and help businesses achieve their digital transformation
-                goals.
+                goals. */}
               </p>
             </div>
           </motion.div>
